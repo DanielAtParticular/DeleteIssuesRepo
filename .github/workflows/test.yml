@@ -15,4 +15,4 @@ jobs:
         env:
           GH_TOKEN: ${{ steps.generate-token.outputs.token }}
         run: |
-          gh delete 1 --repo DanielAtParticular/DeleteIssuesRepo
+          gh issue delete 1 --repo DanielAtParticular/DeleteIssuesRepo
