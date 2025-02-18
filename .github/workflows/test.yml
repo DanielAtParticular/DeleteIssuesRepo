@@ -15,4 +15,4 @@ jobs:
         env:
           GH_TOKEN: ${{ steps.generate-token.outputs.token }}
         run: |
-          gh api octocat
+          gh delete 1 --repo DanielAtParticular/DeleteIssuesRepo
