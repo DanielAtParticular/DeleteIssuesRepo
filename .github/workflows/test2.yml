@@ -1,0 +1,16 @@
+name: Clear issues with sensitive data
+on:
+  workflow_dispatch:
+
+jobs:
+  clear-sensitive-data-issues:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    
+    steps:
+      - name: Process old closed issues with "Sensitive Data" label
+        run: |
+          gh issue delete 4 --repo DanielAtParticular/DeleteIssuesRepo
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
